@@ -20,7 +20,8 @@ Exercícios de Prática: Arrays como Contadores
     frequência de cada letra do alfabeto (ignorando maiúsculas e minúsculas). Imprima o resultado.
 
     Gerador de Senhas:
-    Simule a geração de 50 senhas de 8 caracteres. As senhas devem ser compostas por letras e números. Use um array para contar quantas vezes cada um dos 10 dígitos (0-9) aparece nas senhas geradas.
+    Simule a geração de 50 senhas de 8 caracteres. As senhas devem ser compostas por letras e números.
+    Use um array para contar quantas vezes cada um dos 10 dígitos (0-9) aparece nas senhas geradas.
 
     Sorteio da Loteria:
     Simule 10 sorteios de um jogo de loteria com 6 números de 1 a 60. Use um array para contar quantas vezes
