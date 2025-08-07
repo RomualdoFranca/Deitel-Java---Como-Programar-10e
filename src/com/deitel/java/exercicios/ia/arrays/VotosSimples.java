@@ -24,6 +24,7 @@ public class VotosSimples {
 		
 		for (int i = 0; i < totalVotos.length; i++) {
 			if (i != 0) {//condição para não imprimir o indice 0
+				//imprime o resultado de forma tabular
 				System.out.printf("%s%8s%n", "Candidadto", "Votos");
 				System.out.printf("%3d%14d%n", i, totalVotos[i]);
 				
