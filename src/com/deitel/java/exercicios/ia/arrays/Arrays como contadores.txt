@@ -1,0 +1,40 @@
+Exercícios de Prática: Arrays como Contadores
+
+    Contagem de Votos Simples:
+    Crie um programa que simule a votação para 3 candidatos. Peça ao usuário para votar 10 vezes (digitando 1, 2 ou 3) e,
+    ao final, imprima o total de votos para cada candidato.
+
+    Análise de Notas:
+    Receba 20 notas de alunos (de 0 a 10) e use um array para contar quantas vezes cada nota foi atribuída.
+    Imprima um resumo mostrando quantas notas 0, quantas notas 1, etc., foram dadas.
+
+    Lançamento de Moedas:
+    Simule o lançamento de uma moeda 1000 vezes. Use um array de tamanho 2 para contar quantas vezes deu "cara"
+    (índice 0) e quantas vezes deu "coroa" (índice 1).
+
+    Pesquisa de Satisfação:
+    Faça um programa que leia 30 respostas de uma pesquisa de satisfação, com notas de 1 a 5.
+    Use um array para contar a frequência de cada nota e exiba o resultado.
+
+    Análise de Letras: Peça ao usuário para digitar uma frase. Use um array de tamanho 26 para contar a
+    frequência de cada letra do alfabeto (ignorando maiúsculas e minúsculas). Imprima o resultado.
+
+    Gerador de Senhas:
+    Simule a geração de 50 senhas de 8 caracteres. As senhas devem ser compostas por letras e números. Use um array para contar quantas vezes cada um dos 10 dígitos (0-9) aparece nas senhas geradas.
+
+    Sorteio da Loteria:
+    Simule 10 sorteios de um jogo de loteria com 6 números de 1 a 60. Use um array para contar quantas vezes
+    cada número foi sorteado e imprima os 5 números mais frequentes.
+
+    Histograma de Alturas:
+    Crie um programa que leia a altura de 50 pessoas e as categorize em faixas de 10cm
+    (por exemplo, 1,50m a 1,59m, 1,60m a 1,69m, etc.). Use um array para contar quantas pessoas se encaixam em cada faixa.
+
+    Variação de Temperaturas: Simule a temperatura diária de um mês (30 dias) e use um array
+    para contar quantas vezes a temperatura esteve abaixo de 10°C, entre 10°C e 20°C, e acima de 20°C.
+
+    Análise de Dados de Vendas:
+    Imagine que você tem 100 registros de vendas, e cada venda está associada a uma categoria de produto
+    (1 a 5). Use um array para contar o número de vendas por categoria e determine qual categoria foi a mais vendida.
+
+Esses exercícios vão te ajudar a praticar a lógica de usar índices de array para representar categorias e os valores do array para armazenar as contagens correspondentes.
