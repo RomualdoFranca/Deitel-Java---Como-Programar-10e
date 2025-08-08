@@ -1,5 +1,6 @@
 package com.deitel.java.exercicios.ia.arrays;
 
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class AnaliseLetras {
@@ -27,19 +28,51 @@ public class AnaliseLetras {
 			//em cada posicao da array de caracteres, vai ser adicionado a letra da frase correspondente a mesma posicao
 			fraseCaracteres[i] = frase.charAt(i);
 		}
-		System.out.println("Imprimindo o último caractére: " + fraseCaracteres[4]);
-		System.out.println("Tamanho da array de caracteres: " + fraseCaracteres.length);
-		System.out.println(fraseCaracteres.getClass().isArray());
 		
+		//imprime os caracteres da array
 		for (char c : fraseCaracteres) {
 			System.out.print(c + " ");
 		}
+		
+		System.out.println();
+		
+		
+		int[] frequencia = new int[26];
+		char[] alfabeto = new char[26];
+		
+		for (int i = 0; i < 26; i++) {
+			alfabeto[i] = (char) ('a' + i);
+		}
+		
+		for (int i = 0; i < fraseCaracteres.length; i++) {
+			for (int j = 0; j < alfabeto.length; j++) {
+				
+				if(fraseCaracteres[i] == alfabeto[j]) {
+					++frequencia[j];
+				}
+			}
+		}
+		
+		for (int i = 0; i < frequencia.length; i++) {
+			System.out.printf("%s%14s%n", "Letra", "Frequencia");
+			System.out.printf("%3s%8d%n", alfabeto[i], frequencia[i]);
+		}
+		
+		
+		
+//		System.out.println("Imprimindo o último caractére: " + fraseCaracteres[4]);
+//		System.out.println("Tamanho da array de caracteres: " + fraseCaracteres.length);
+		
+		//verifica se é do tipo array
+//		System.out.println(fraseCaracteres.getClass().isArray());
+		
 
-		String[] frequenciaLetras = new String[] {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l",
-				"m", "n", "o", "p", "k", "r", "s", "t", "u", "v", "x", "y", "w", "z"};
-//		System.out.println(frequenciaLetras.length);
 		
 		
+		
+		for (char c : alfabeto) {
+			System.out.print(c + " ");
+		}
 	
 	}
 
