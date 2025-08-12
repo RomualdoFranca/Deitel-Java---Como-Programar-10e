@@ -14,10 +14,9 @@ public class GeradorSenhas {
 		// (int) -> Converte o double para um inteiro, truncando as casas decimais.
 		// + min -> Desloca o resultado para começar a partir do 'min'.
 		
+			
 		int[] intervalo = new int[36];
 		
-		double min = 0;
-		double max = 35;
 		
 		//insere no array os numero de zero a nove
 		for (int i = 0; i < 10; i++) {
@@ -33,10 +32,40 @@ public class GeradorSenhas {
 		}
 		
 		//imprime a lista
-		for (int i : intervalo) {
-			System.out.print(i + " ");
+//		for (int i : intervalo) {
+//			System.out.print(i + " ");
+//		}
+//		System.out.println();
+		
+		//intervalo correspondente ao tamanho da array
+		double min = 0;
+		double max = 35;
+		
+		//gera a senha alfanumerica com 8 caracteres
+		for (int i = 1; i <= 8; i++) {
+			int numRandom = (int) (Math.random() * (max - min + 1) + min);
+//			System.out.print(numRandom + " ");
+			
+			if(numRandom < 10) {
+//				intervalo[i] = numRandom;
+				System.out.print(intervalo[numRandom]);
+			}else {
+				
+				char letra = (char) intervalo[numRandom];
+				System.out.print(letra);
+			}
 		}
-		System.out.println();
+		System.out.println("\n______________________________________");
+//		for (int i : intervalo) {
+//			System.out.print(i + " ");
+//		}
+		
+		
+		
+		
+		
+		
+		
 	}
 
 }
