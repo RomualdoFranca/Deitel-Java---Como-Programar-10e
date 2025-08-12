@@ -33,28 +33,34 @@ public class AnaliseLetras {
 		for (char c : fraseCaracteres) {
 			System.out.print(c + " ");
 		}
-		
+		//imprime uma quebra de linha
 		System.out.println();
 		
 		
-		int[] frequencia = new int[26];
-		char[] alfabeto = new char[26];
+		int[] frequencia = new int[26];//array para armazenar o numero de frequencia em que as letras aparecem na frase
+		char[] alfabeto = new char[26];//armazena o alfabeto
 		
+		//gera e preenche a array com as letras do alfabeto
 		for (int i = 0; i < 26; i++) {
 			alfabeto[i] = (char) ('a' + i);
 		}
 		
+		//o loop externo itera sobre a array de caracteres
 		for (int i = 0; i < fraseCaracteres.length; i++) {
+			//o loop interno itera sobre a array com as letras do alfabeto
 			for (int j = 0; j < alfabeto.length; j++) {
-				
+				//compara letra da array de caractere com os letras da array de letras do alfabeto
 				if(fraseCaracteres[i] == alfabeto[j]) {
+					//adiciona 1 cada vez que uma determinada letra é encontrada numa posição correspondente
+					//da array do alfabeto
 					++frequencia[j];
 				}
 			}
 		}
 		
 		for (int i = 0; i < frequencia.length; i++) {
-			System.out.printf("%s%14s%n", "Letra", "Frequencia");
+			//imprime de forma tabular a letra e numero de frequencia que aparece na frase
+			System.out.printf("%s%14s%n", "Letra", "Frequência");
 			System.out.printf("%3s%8d%n", alfabeto[i], frequencia[i]);
 		}
 		
