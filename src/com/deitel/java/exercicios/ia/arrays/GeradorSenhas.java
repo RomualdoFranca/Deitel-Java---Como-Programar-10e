@@ -28,6 +28,9 @@ public class GeradorSenhas {
 		}
 		System.out.println();
 		
+		
+		//loop com condicionais que imprime apenas os números no intervalo dos numeros da tabela ASCII de letras minusculas
+		
 		for (int i = 1; i < 20; i++) {
 			double random = Math.random();
 			if (random >= 0.97) {
@@ -44,9 +47,6 @@ public class GeradorSenhas {
 				System.out.println("Número diferente do intervalo");
 				
 			}
-//			System.out.printf("%.3f\n", Math.random());
-//			int numeroAleatorio = (int) (Math.random() * (max - min + 1) + min);
-//			System.out.print(numeroAleatorio + " ");		
 			
 		}
 		
