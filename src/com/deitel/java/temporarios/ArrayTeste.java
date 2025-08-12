@@ -4,35 +4,40 @@ public class ArrayTeste {
 
 	public static void main(String[] args) {
 
-		//arry que armazena os numeros do intervalo de zero a nove
-		int[] primeiroIntervalo = new int[10];
 		
-		//preenche a array com os numero de 0  a 9
-		for (int i = 0; i < primeiroIntervalo.length; i++) {
-			primeiroIntervalo[i] = i;
+		//array que armazena os numeros de zero a nove e os numeros correspondentes as letras minusculas da tabela ASCII
+		int[] intervaloCompleto = new int[36];
+		int numCount = 97;//numero que representa a letra 'a' da tabela ASCII
+		
+		for (int i = 0; i < intervaloCompleto.length; i++) {
+			if(i < 10) {
+				intervaloCompleto[i] = i;//ascrecenta os numeros de zero a nove
+			}else {
+				intervaloCompleto[i] = numCount;//acrescenta os numeros de 97 a 122 que representa o alfabeto minusculo
+				numCount++;
+			}
 		}
-		for (int i : primeiroIntervalo) {
+		
+		for (int i : intervaloCompleto) {
 			System.out.print(i + " ");
 		}
 		System.out.println();
+		//gerar numeros aleatorio no intervalo do tamanho da array intervaloCompleto
+		int min = 0;
+		int max = 35;
 		
 		
-		int[] segundoIntervalo = new int[26];
-		int count = 97;
-		
-		for (int i = 0; i < segundoIntervalo.length; i++) {
-			segundoIntervalo[i] = count;
-			count++;
+		for (int i = 1; i <= 8; i++) {
+			int numAleatorio = (int) (Math.random() * (max - min + 1) + min);
+			
+			if(numAleatorio < 10) {
+				System.out.println("Número: " + intervaloCompleto[numAleatorio]);
+			}else {
+				System.out.println("Letra: " + intervaloCompleto[numAleatorio]);
+				
+			}
+			
 		}
-		
-		for (int i : segundoIntervalo) {
-			System.out.print(i + " ");
-		}
-		
-		System.out.println();
-		
-		
-		
 		
 		
 	}
