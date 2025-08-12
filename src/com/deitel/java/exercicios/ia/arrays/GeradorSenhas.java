@@ -7,8 +7,6 @@ public class GeradorSenhas {
 	
 	public static void main(String[] args) {
 
-//		int min = 97;
-//		int max =  122;
 		
 		// Explicação da fórmula:
 		// (max - min + 1) -> Define o tamanho do intervalo. Por exemplo, de 97 a 122, são 25 números.
@@ -16,42 +14,29 @@ public class GeradorSenhas {
 		// (int) -> Converte o double para um inteiro, truncando as casas decimais.
 		// + min -> Desloca o resultado para começar a partir do 'min'.
 		
-		double min = 0.97;
-		double max = 0.99;
-//		//tamaho total do intervalo: 
-//		System.out.println("tamaho total do intervalo:" + (max - min));
+		int[] intervalo = new int[36];
 		
+		double min = 0;
+		double max = 35;
 		
-		//loop para gerar uma sequencia numerica representando os numero correspondentes as letras minusculas da tabela ASCII
-		for (int i = 97; i <= 122; i++) {
-			System.out.printf(i +" ");
+		//insere no array os numero de zero a nove
+		for (int i = 0; i < 10; i++) {
+			intervalo[i] = i;
+		}
+		
+		//insere no array os números que representam o alfabeto minusculo da tabela ASCII
+		int numCount = 97;//representa a letra 'a' da tabela ASCII
+		
+		for (int i = 10; i < intervalo.length; i++) {
+			intervalo[i] = numCount;
+			numCount++;
+		}
+		
+		//imprime a lista
+		for (int i : intervalo) {
+			System.out.print(i + " ");
 		}
 		System.out.println();
-		
-		
-		//loop com condicionais que imprime apenas os números no intervalo dos numeros da tabela ASCII de letras minusculas
-		
-		for (int i = 1; i < 20; i++) {
-			double random = Math.random();
-			if (random >= 0.97) {
-				random *= 100;
-				int num = (int) random;
-				System.out.println(num);
-				
-			}else if(random >= 0.1 && random <= 0.122) {
-				random *= 1000;
-				int num = (int) random;
-				System.out.println(num);
-				
-			}else {
-				System.out.println("Número diferente do intervalo");
-				
-			}
-			
-		}
-		
-		
-		
 	}
 
 }

@@ -31,9 +31,11 @@ public class ArrayTeste {
 			int numAleatorio = (int) (Math.random() * (max - min + 1) + min);
 			
 			if(numAleatorio < 10) {
-				System.out.println("Número: " + intervaloCompleto[numAleatorio]);
+				System.out.print(intervaloCompleto[numAleatorio]);
 			}else {
-				System.out.println("Letra: " + intervaloCompleto[numAleatorio]);
+				//converte o numero correspondente da tabela ASCII do alfabeto minusculo em letra
+				char letra = (char) intervaloCompleto[numAleatorio];
+				System.out.print(letra);
 				
 			}
 			
