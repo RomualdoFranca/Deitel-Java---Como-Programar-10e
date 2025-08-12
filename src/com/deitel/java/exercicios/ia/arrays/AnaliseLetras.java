@@ -14,10 +14,16 @@ public class AnaliseLetras {
 		
 		System.out.println("Digite uma frase:");
 		
-		//formata as letras da frase em minuscula e retira os espaços
-		String frase = sc.nextLine().toLowerCase().trim();
+		//formata as letras da frase em minuscula e retira os espaços. Exemplo de pre processamento
+		String frase = sc.nextLine().toLowerCase().trim();//o .trim() retira os espaços do inicio e final da string
 		//tamanho da frase inseridda
 		System.out.println("Número de caracteres da frase sem espaços:\n" + frase.length());
+		
+		//*********** IA comments *****************************
+		//O código cria um array de caracteres (char[] fraseCaracteres) e o preenche com os caracteres da string.
+		//Embora funcional, essa etapa de criar um novo array para a frase não é estritamente necessária.
+		//O loop de contagem poderia iterar diretamente sobre a string frase usando o método frase.charAt(i).
+		//**************************************************************************************
 		
 		//array para armazenas os caracteres da frase
 		//o tamanho da array vai ser definido pelo numero de caracteres da frase
