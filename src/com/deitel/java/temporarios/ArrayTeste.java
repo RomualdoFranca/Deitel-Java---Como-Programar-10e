@@ -4,44 +4,70 @@ public class ArrayTeste {
 
 	public static void main(String[] args) {
 
+//		StringBuilder sb = new StringBuilder();
+//		sb.append("a");
+//		sb.append(2);
+//		sb.append('z');
+//		
+//		StringBuilder sb2 = new StringBuilder();
+//		sb2.append("c");
+//		sb2.append(5);
+//		sb2.append('b');
+//		
+//		StringBuilder sb3 = new StringBuilder();
+//		sb3.append("v");
+//		sb3.append("x");
+//		sb3.append(8);
+//		
+//		String stg = sb.toString();
+//		System.out.println(stg);
+//		
+//		String[] arrayString = new String[3];
+//		arrayString[0] = sb.toString();
+//		arrayString[1] = sb2.toString();
+//		arrayString[2] = sb3.toString();
+//		
+//		for (String string : arrayString) {
+//			System.out.println(string);
+//		}
 		
-		//array que armazena os numeros de zero a nove e os numeros correspondentes as letras minusculas da tabela ASCII
-		int[] intervaloCompleto = new int[36];
-		int numCount = 97;//numero que representa a letra 'a' da tabela ASCII
+		//String.valueOf();
+		int[] num = new int[8];
+		preencheArrayNumerica(num);
 		
-		for (int i = 0; i < intervaloCompleto.length; i++) {
-			if(i < 10) {
-				intervaloCompleto[i] = i;//ascrecenta os numeros de zero a nove
-			}else {
-				intervaloCompleto[i] = numCount;//acrescenta os numeros de 97 a 122 que representa o alfabeto minusculo
-				numCount++;
-			}
+		for (int i : num) {
+			System.out.print(i);
 		}
 		
-		for (int i : intervaloCompleto) {
-			System.out.print(i + " ");
-		}
-		System.out.println();
-		//gerar numeros aleatorio no intervalo do tamanho da array intervaloCompleto
-		int min = 0;
-		int max = 35;
+		System.out.println("\n_____________________");
+		String[] stg = converteString(num);
 		
-		
-		for (int i = 1; i <= 8; i++) {
-			int numAleatorio = (int) (Math.random() * (max - min + 1) + min);
-			
-			if(numAleatorio < 10) {
-				System.out.print(intervaloCompleto[numAleatorio]);
-			}else {
-				//converte o numero correspondente da tabela ASCII do alfabeto minusculo em letra
-				char letra = (char) intervaloCompleto[numAleatorio];
-				System.out.print(letra);
-				
-			}
-			
+		for (String string : stg) {
+			System.out.println(string);
 		}
 		
 		
 	}
-
+	
+	public static String[] converteString(int[] array) {
+		String[] armazenaSenha = new String[5];
+		
+		for (int i = 0; i < armazenaSenha.length; i++) {
+			for (int j = 0; j < array.length; j++) {
+				StringBuilder sb  = new StringBuilder();
+				sb.append(String.valueOf(array[i]));
+				armazenaSenha[i] = sb.toString();
+			}
+		}
+		return armazenaSenha;
+	}
+	
+	public static void preencheArrayNumerica(int[] array) {
+		int min = 0;
+		int max = 9;
+		for (int i = 0; i < array.length; i++) {
+			
+			array[i] = (int) (Math.random() * (max - min + 1) + min);
+		}
+	}
 }
