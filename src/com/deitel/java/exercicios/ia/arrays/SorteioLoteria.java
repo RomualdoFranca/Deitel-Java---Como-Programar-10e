@@ -30,13 +30,7 @@ public class SorteioLoteria {
 			System.out.printf("\n%10d%18d%n" ,i, frequenciaNumerica[i]);
 		}
 		
-		System.out.println("Foreach");
-		
-		System.out.printf("\n%s%15s" , "Números do Sorteio","Frequência");
-		for (int i : frequenciaNumerica) {
-			System.out.printf("\n%10d%18d%n" ,i, frequenciaNumerica[i]);
-			
-		}
+
 
 	}
 
